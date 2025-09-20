@@ -1,0 +1,43 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# pastaDaGg
+### Authentic italian `ggplot2` recepies
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+A delicious toy wrapper around `ggplot2` for visualizing longitudinal datasets.
+
+## Installation
+
+You can install the development version of pastaDaGg from [GitHub](https://github.com/) with:
+
+```{r}
+# install.packages("pak")
+pak::pak("SereDef/pastaDaGg")
+# or 
+# devtools::install_github("SereDef/pastaDaGg")
+```
+
+## Examples
+
+### Spaghetti
+```{r}
+library(pastaDaGg)
+
+#spaghetti(anthropometry, y = "head_circumference", id = "id", color_by = "sex", split_by = "nationality")
+#' 
+```
