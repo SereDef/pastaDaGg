@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# pastaDaGg
+# pastaDaGg <img src="man/figures/logo.png" align="right" height="131" alt="" />
 
 ### Authentic italian `ggplot2` recepies
 
@@ -26,13 +26,13 @@ devtools::install_github("SereDef/pastaDaGg")
 #> Downloading GitHub repo SereDef/pastaDaGg@HEAD
 #> 
 #> ── R CMD build ─────────────────────────────────────────────────────────────────
-#> * checking for file ‘/private/var/folders/f9/fknlq25n23l74zmhg8zbckx80000gn/T/Rtmp1f3fPV/remotesbe7bfabeb2d/SereDef-pastaDaGg-775ea8c/DESCRIPTION’ ... OK
+#> * checking for file ‘/private/var/folders/f9/fknlq25n23l74zmhg8zbckx80000gn/T/RtmpEh977E/remotesc9312d81c145/SereDef-pastaDaGg-ebf5bb6/DESCRIPTION’ ... OK
 #> * preparing ‘pastaDaGg’:
 #> * checking DESCRIPTION meta-information ... OK
 #> * checking for LF line-endings in source and make files and shell scripts
 #> * checking for empty or unneeded directories
 #> * building ‘pastaDaGg_0.0.0.9000.tar.gz’
-#> Installing package into '/private/var/folders/f9/fknlq25n23l74zmhg8zbckx80000gn/T/RtmpBdEh3u/temp_libpathb07932200cb'
+#> Installing package into '/private/var/folders/f9/fknlq25n23l74zmhg8zbckx80000gn/T/RtmpBdEh3u/temp_libpathb07927373b6e'
 #> (as 'lib' is unspecified)
 ```
 
