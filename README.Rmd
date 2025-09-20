@@ -27,17 +27,16 @@ You can install the development version of pastaDaGg from [GitHub](https://githu
 
 ```{r}
 # install.packages("pak")
-pak::pak("SereDef/pastaDaGg")
+# pak::pak("SereDef/pastaDaGg")
 # or 
-# devtools::install_github("SereDef/pastaDaGg")
+devtools::install_github("SereDef/pastaDaGg")
 ```
 
 ## Examples
 
 ### Spaghetti
-```{r spaghetti, fig.width=7, fig.height=5}
+```{r spaghetti, fig.width=7, fig.height=4.5}
 library(pastaDaGg)
 
-pastaDaGg::spaghetti(anthropometry, y = "head_circumference", id = "id", color_by = "sex", split_by = "nationality")
-#' 
+spaghetti(anthropometry, y = "head_circumference", id = "id", color_by = "sex", split_by = "nationality")
 ```
