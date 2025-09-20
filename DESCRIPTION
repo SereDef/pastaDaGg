@@ -1,0 +1,10 @@
+Package: pastaDaGg
+Title: Authentic italian `ggplot2` recepies
+Version: 0.0.0.9000
+Authors@R: 
+    person("Serena", "Defina", , "s.defina@erasmusmc.nl", role = c("aut", "cre"))
+Description: A delicious toy wrapper around `ggplot2` for visualizing longitudinal datasets.
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
