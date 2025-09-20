@@ -35,9 +35,9 @@ pak::pak("SereDef/pastaDaGg")
 ## Examples
 
 ### Spaghetti
-```{r}
+```{r spaghetti, fig.width=7, fig.height=5}
 library(pastaDaGg)
 
-#spaghetti(anthropometry, y = "head_circumference", id = "id", color_by = "sex", split_by = "nationality")
+pastaDaGg::spaghetti(anthropometry, y = "head_circumference", id = "id", color_by = "sex", split_by = "nationality")
 #' 
 ```
