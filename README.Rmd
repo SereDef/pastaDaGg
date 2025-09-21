@@ -25,18 +25,28 @@ A delicious toy wrapper around `ggplot2` for visualizing longitudinal datasets.
 
 You can install the development version of pastaDaGg from [GitHub](https://github.com/) with:
 
-```{r}
+```{r installation, eval=FALSE}
 # install.packages("pak")
-# pak::pak("SereDef/pastaDaGg")
+pak::pak("SereDef/pastaDaGg")
 # or 
-devtools::install_github("SereDef/pastaDaGg")
+# devtools::install_github("SereDef/pastaDaGg")
 ```
 
 ## Examples
 
 ### Spaghetti
-```{r spaghetti, fig.width=7, fig.height=4.5}
+```{r spaghetti, fig.width=7, fig.height=4}
 library(pastaDaGg)
 
-spaghetti(anthropometry, y = "head_circumference", id = "id", color_by = "sex", split_by = "nationality")
+spaghetti(anthropometry, id = "id", 
+  y = "head_circumference", 
+  y_lab = "Head circumference (cm)",
+  x_lab = "Age (years)", # x is "age" by default
+  color_by = "sex", 
+  split_by = "nationality")
+```
+
+### Rigatoni
+```{r rigatoni, fig.width=7, fig.height=4}
+rigatoni(anthropometry, x = 'nationality', y = 'bmi', split_by='sex')
 ```

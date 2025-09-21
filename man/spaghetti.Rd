@@ -6,8 +6,8 @@
 \usage{
 spaghetti(
   data,
-  y,
   id,
+  y,
   x = "age",
   color_by = NULL,
   split_by = NULL,
@@ -16,15 +16,17 @@ spaghetti(
   hide_legend = FALSE,
   interactive = FALSE,
   title = "Spaghetti",
+  y_lab = y,
+  x_lab = x,
   ...
 )
 }
 \arguments{
 \item{data}{A data frame or tibble containing the data.}
 
-\item{y}{Name of the outcome variable to plot on y-axis.}
+\item{id}{Name of the grouping variable (e.g. subject ID column in longitudinal data).}
 
-\item{id}{Name of the subject ID variable.}
+\item{y}{Name of the outcome variable to plot on y-axis.}
 
 \item{x}{Name of the time variable (default is "age").}
 
@@ -42,14 +44,24 @@ spaghetti(
 
 \item{title}{Character; plot title.}
 
+\item{y_lab}{Character; y-axis label (default is y variable name).}
+
+\item{x_lab}{Character; x-axis label (default is x variable name).}
+
 \item{...}{Additional arguments passed to geom_point().}
 }
 \value{
 A ggplot or plotly object.
 }
 \description{
-Draws subject-wise longitudinal ("spaghetti") plots for repeated-measures data,
-with options for color, faceting, and interactivity.
+Draws subject-wise longitudinal ("spaghetti") plots for grouped data.
+This works well for repeated-measures for example, to visualize individual
+trajectories.
+Various options are available for color, faceting.
+The plots can be optionally rendered interactely using \code{plotly}.
+Default hover behavior will dispplay the label of grouping (e.g. the
+ID of each individual trajectory). This can be useful for instance to identify
+outlier subjets.
 }
 \examples{
 # Basic spaghetti plot

@@ -15,7 +15,8 @@ library(dplyr)
 n_subjects <- 200   # number of unique subjects
 n_measures <- 8    # repeated measures per subject
 ages <- seq(1, 19, length.out = n_measures)
-nationalities <- c("Dutch", "Italian", "French", "British", "German")
+nationalities <- c("Dutch", "Italian", "French", 
+                   "British", "German", "Spanish")
 
 # Generate subject-level data (random effects)
 subj_df <- data.frame(
