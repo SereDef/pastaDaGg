@@ -12,6 +12,13 @@
 A delicious toy wrapper around `ggplot2` for visualizing longitudinal
 datasets.
 
+### TODO:
+
+- [ ] Add mezzirigatoni tagliatelle and lasagna plots (need to be
+  translated from python)
+- [ ] Add color palettes (sugo, pesto, blue cheese) and prettify theme
+- [ ] Simulated dataset rebrand (longitudinal diet scores)
+
 ## Installation
 
 You can install the development version of `pastaDaGg` from
@@ -36,7 +43,7 @@ spaghetti(anthropometry, id = "id",
   y_lab = "Head circumference (cm)",
   x_lab = "Age (years)", # x is "age" by default
   color_by = "sex", 
-  split_by = "nationality")
+  split_by = "nationality", size = 0.5)
 ```
 
 <img src="man/figures/README-spaghetti-1.png" width="100%" />
@@ -52,8 +59,9 @@ rigatoni(anthropometry, x = 'nationality', y = 'bmi', split_by='sex')
 ### Orecchiette
 
 ``` r
-orecchiette(anthropometry, x='head_circumference', 
-            color_by = 'sex', split_by = 'sex~timepoint')
+orecchiette(anthropometry, x='height',
+            color_by = 'sex', split_by = 'sex~timepoint', 
+            x_lab = "Height (cm)")
 ```
 
 <img src="man/figures/README-orecchiette-1.png" width="100%" />
