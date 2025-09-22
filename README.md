@@ -14,7 +14,7 @@ datasets.
 
 ## Installation
 
-You can install the development version of pastaDaGg from
+You can install the development version of `pastaDaGg` from
 [GitHub](https://github.com/) with:
 
 ``` r
@@ -48,3 +48,12 @@ rigatoni(anthropometry, x = 'nationality', y = 'bmi', split_by='sex')
 ```
 
 <img src="man/figures/README-rigatoni-1.png" width="100%" />
+
+### Orecchiette
+
+``` r
+orecchiette(anthropometry, x='head_circumference', 
+            color_by = 'sex', split_by = 'sex~timepoint')
+```
+
+<img src="man/figures/README-orecchiette-1.png" width="100%" />

@@ -5,6 +5,7 @@
 #' @format A data frame with `n` rows and 7 variables:
 #' \describe{
 #'   \item{id}{Subject ID}
+#'   \item{timepoint}{Time point ID}
 #'   \item{age}{Age in years}
 #'   \item{sex}{Sex ("Male", "Female")}
 #'   \item{nationality}{Nationality (e.g., "Dutch", "Italian")}

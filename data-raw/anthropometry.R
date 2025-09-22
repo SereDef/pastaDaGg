@@ -37,7 +37,8 @@ anthropometry <- subj_df %>%
   slice(rep(1:n(), each = n_measures)) %>%
   group_by(id) %>%
   mutate(
-    age = ages + rnorm(n_measures, 0, 0.5),  # smaller jitter for more realistic spacing
+    timepoint = 1:n_measures,
+    age = ages + rnorm(n_measures, 0, 0.8),  # smaller jitter for more realistic spacing
     # Nonlinear head circumference: logistic/log growth + sex + random slopes
     head_circumference = case_when(
       sex == "Male" ~ 48 + 13 / (1 + exp(-0.5 * (age - 3))) + 0.1 * log(age + 1) + head_int + head_slope * age + rnorm(n_measures, 0, 1.2),
@@ -57,9 +58,11 @@ anthropometry <- subj_df %>%
     # Weight is computed from BMI and height
     weight = bmi * (height/100)^2
   ) %>%
-  select(id, age, sex, nationality, head_circumference, height, weight, bmi)
+  select(id, timepoint, age, sex, nationality, head_circumference, height, weight, bmi)
 
 # Display the first few rows
 head(anthropometry)
+
+anthropometry$age[anthropometry$age < 0] <- 0.6
 
 usethis::use_data(anthropometry, overwrite = TRUE)

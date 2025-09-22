@@ -23,7 +23,7 @@ A delicious toy wrapper around `ggplot2` for visualizing longitudinal datasets.
 
 ## Installation
 
-You can install the development version of pastaDaGg from [GitHub](https://github.com/) with:
+You can install the development version of `pastaDaGg` from [GitHub](https://github.com/) with:
 
 ```{r installation, eval=FALSE}
 # install.packages("pak")
@@ -49,4 +49,10 @@ spaghetti(anthropometry, id = "id",
 ### Rigatoni
 ```{r rigatoni, fig.width=7, fig.height=4}
 rigatoni(anthropometry, x = 'nationality', y = 'bmi', split_by='sex')
+```
+
+### Orecchiette
+```{r orecchiette, fig.width=7, fig.height=4}
+orecchiette(anthropometry, x='head_circumference', 
+            color_by = 'sex', split_by = 'sex~timepoint')
 ```
